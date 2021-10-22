@@ -6,7 +6,7 @@ int main()
 {
 	int inputNumber;
 
-	cout << "Enter an integer: ";
+	cout << "Enter an int: ";
 
 	cin >> inputNumber;
 
