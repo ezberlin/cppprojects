@@ -1,3 +1,3 @@
-# About this book
+# About this repo
 
-This is code for practcing exercises and quizzes from the book "Sams teach yourself C++ in one hour a day"
+This is code for practcing exercises and quizzes from the book  **Sams teach yourself C++ in one hour a day**.
