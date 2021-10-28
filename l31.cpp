@@ -16,6 +16,7 @@ int main()
 	int secondNumber = 0;
 	cin >> secondNumber;
 
+	//here we store the result
 	int multiplicationResult = firstNumber * secondNumber;
 
 	cout << firstNumber << " x " << secondNumber;
