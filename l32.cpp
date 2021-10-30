@@ -3,7 +3,6 @@ using namespace std;
 
 void MultiplyNumbers()
 {
-	cout << "This program will help you multiply two numbers" << endl;
 
 	cout << "Enter the first number: ";
 	int firstNumber = 0, secondNumber = 0, multiplicationResult = 0;
