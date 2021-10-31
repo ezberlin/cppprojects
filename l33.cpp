@@ -17,6 +17,8 @@ void MultiplyNumbers()
 	//here we store the result
 	multiplicationResult = firstNumber * secondNumber;
 
+	cout << "Displaying from MultiplyNumbers(): ";
+
 	cout << firstNumber << " x " << secondNumber << " = " << multiplicationResult << endl;
 
 }
