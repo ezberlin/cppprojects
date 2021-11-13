@@ -6,7 +6,7 @@ int main()
 {
     auto coinFlippedHeads {true};
     auto largeNumber {250000000000000};
-    typedef unsigned long long int ulli;
+    typedef unsigned long long int ulli;// unsigned long long int = ulli
     ulli x {100};
     cout << "coinFlippedHeads = " << coinFlippedHeads;
 
