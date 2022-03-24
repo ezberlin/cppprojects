@@ -11,7 +11,7 @@ int main()
 
 		cout << "Enter first number: ";
 		cin >> firstNumber;
-		cout << "Enter operation: (addition=1, subtraction=2, multiplication=3, division=4)" << endl;
+		cout << "Enter operation: (addition = 1, subtraction = 2, multiplication = 3, division = 4, test of relation = 5)" << endl;
 		cin >> operation;
 		cout << "Enter second number: " << endl;
 		cin >> secondNumber;
@@ -31,10 +31,29 @@ int main()
 			int result = firstNumber * secondNumber;
 			cout << "The result is " << result << endl;
 		}
-		else if(operation == 4 && firstNumber != 0 && secondNumber != 0)
+		else if(operation == 4 && secondNumber != 0)
 		{
 			float result = firstNumber / secondNumber;
 			cout << "The result is " << result << endl;
+		}
+		else if(operation == 5) //test of equality
+		{
+			if (firstNumber == secondNumber)
+			{
+				cout << "The first number equals the second" << endl;
+			}
+			if (firstNumber < secondNumber)
+			{
+				cout << "The first number is less than the second" << endl;
+			}
+			if (firstNumber > secondNumber)
+			{
+				cout << "The first number is greater than the second" << endl;
+			}
+		}
+		else
+		{
+			cout << "Invalid entry" << endl;
 		}
 		cout << "Do you want to return? (0/1)" << endl;
 		cin >> again;
