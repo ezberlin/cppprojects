@@ -58,6 +58,6 @@ int main()
 		cout << "Do you want to return? (0/1)" << endl;
 		cin >> again;
 	}
-	
+	cout << "Thanks for using!"
 	return 0;
 }
