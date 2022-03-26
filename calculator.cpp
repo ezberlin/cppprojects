@@ -5,38 +5,38 @@ int main()
 {
 	while (again == 1)
 	{
-		int operation = 0;
+		char operation = 0;
 		int firstNumber = 0;
 		int secondNumber = 0;
 
-		cout << "Enter first number: "; //hello
+		cout << "Enter first number: ";
 		cin >> firstNumber;
-		cout << "Enter operation: (addition = 1, subtraction = 2, multiplication = 3, division = 4, test of relation = 5)" << endl;
+		cout << "Enter operation (addition: +, subtraction: -, multiplication: *, division: /, test of relation: =): ";
 		cin >> operation;
-		cout << "Enter second number: " << endl;
+		cout << "Enter second number: ";
 		cin >> secondNumber;
 
-		if (operation == 1) //addition
+		if (operation == 43) //addition
 		{
 			int result = firstNumber + secondNumber;
 			cout << "The result is " << result << endl;
 		}
-		else if(operation == 2) //subtraction
+		else if(operation == 45) //subtraction
 		{
 			int result = firstNumber - secondNumber;
 			cout << "The result is " << result << endl;
 		}
-		else if(operation == 3) //multiplication
+		else if(operation == 42) //multiplication
 		{
 			int result = firstNumber * secondNumber;
 			cout << "The result is " << result << endl;
 		}
-		else if(operation == 4 && secondNumber != 0)
+		else if(operation == 47 && secondNumber != 0)
 		{
 			float result = firstNumber / secondNumber;
 			cout << "The result is " << result << endl;
 		}
-		else if(operation == 5) //test of equality
+		else if(operation == 61) //test of equality
 		{
 			if (firstNumber == secondNumber)
 			{
@@ -53,11 +53,11 @@ int main()
 		}
 		else
 		{
-			cout << "Invalid entry" << endl;
+			cout << "Invalid entry, please try again" << endl;
 		}
 		cout << "Do you want to return? (0/1)" << endl;
 		cin >> again;
 	}
-	cout << "Thanks for using!"
+	cout << "Thanks for using!" << endl;
 	return 0;
 }
