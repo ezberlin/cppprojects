@@ -9,7 +9,7 @@ int main()
 		int firstNumber = 0;
 		int secondNumber = 0;
 
-		cout << "Enter first number: ";
+		cout << "Enter first number: "; //hello
 		cin >> firstNumber;
 		cout << "Enter operation: (addition = 1, subtraction = 2, multiplication = 3, division = 4, test of relation = 5)" << endl;
 		cin >> operation;
