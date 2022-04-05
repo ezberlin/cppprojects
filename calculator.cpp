@@ -1,13 +1,13 @@
 #include <iostream>
 using namespace std;
-int again = 1;
+int again {1};
 int main()
 {
 	while (again == 1)
 	{
-		char operation = 0;
-		int firstNumber = 0;
-		int secondNumber = 0;
+		char operation {0};
+		double firstNumber {0};
+		double secondNumber {0};
 
 		cout << "Enter first number: ";
 		cin >> firstNumber;
@@ -21,22 +21,19 @@ int main()
 
 		if (operation == 43) //addition
 		{
-			int result = firstNumber + secondNumber;
-			cout << "The result is " << result << endl;
+			cout << "The result is " << firstNumber + secondNumber << endl;
 		}
 		else if (operation == 45) //subtraction
 		{
-			int result = firstNumber - secondNumber;
-			cout << "The result is " << result << endl;
+			cout << "The result is " << firstNumber - secondNumber << endl;
 		}
 		else if (operation == 42) //multiplication
 		{
-			int result = firstNumber * secondNumber;
-			cout << "The result is " << result << endl;
+			cout << "The result is " << firstNumber * secondNumber << endl;
 		}
-		else if (operation == 47 && secondNumber != 0)
+		else if (operation == 47 && secondNumber != 0) //division
 		{
-			float result = firstNumber / secondNumber;
+			double result {firstNumber / secondNumber};
 			cout << "The result is " << result << endl;
 		}
 		else if (operation == 61) //test of equality
@@ -56,8 +53,7 @@ int main()
 		}
 		else if (operation == 94) //square
 		{
-			int result = firstNumber * firstNumber;
-			cout << "The result is " << result << endl;
+			cout << "The result is " << firstNumber * firstNumber << endl;
 		}
 		else
 		{
