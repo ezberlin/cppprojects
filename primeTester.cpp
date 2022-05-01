@@ -3,23 +3,26 @@ using namespace std;
 
 int main()
 {
-	int number {0};
-	cout << "Enter number: ";
-	cin >> number;
-	for (int t = 2; t <= number; t++)
-	{
-		if (t != number)
-		{
-			if (number % t == 0)
-			{
-				cout << number << " isn't prime." << endl;
-				break;
-			}
-		}
-		else
-		{
-			cout << number << " is prime." << endl;
-		}
-	}
-	return 0;
+  bool is_prime = true;
+  long long int number {0};
+  cout << "Enter number: ";
+  cin >> number;
+  if(number == 1)
+    is_prime = false;
+  for (long long int t = 2; t < number; t++)
+  {
+      if (number % t == 0)
+      {
+        is_prime = false;
+        break;
+      }
+  }
+  if(is_prime)
+    cout << number << " is prime." << endl;
+  else
+    cout << number << " isn't prime." << endl;
+
+  return 0;
 }
+
+
