@@ -14,15 +14,17 @@ int main()
 		cout << "Enter first number: ";
 		string input1, input2;
 		cin >> input1;
-		cout << "Enter operation (addition: +, subtraction: -, multiplication: *,"
-		" division: /, test of relation: =, square: ^, logical operators: ?): ";
+		cout << "Enter operation (addition: +, subtraction: -, "
+		"multiplication: *, division: /, test of relation: =, "
+		"potencies: ^, logical operators: ?): ";
 		cin >> operation;
 		if (operation == 63)
 		{
-			cout << "Enter logical operator (not: x, and: +, or: /, xor: X): ";
+			cout << "Enter logical operator "
+			"(not: x, and: +, or: /, xor: X): ";
 			cin >> logOperator;
 		}
-		if (operation != 94 && logOperator != 120)
+		if (logOperator != 120)
 		{	
 			cout << "Enter second number: ";
 			cin >> input2;
@@ -34,7 +36,8 @@ int main()
 			{
 				firstNumber = stod(input1);
 				secondNumber = stod(input2);
-				cout << "The result is " << firstNumber + secondNumber << endl;
+				cout << "The result is " << firstNumber + secondNumber;
+				cout << endl;
 			}
 			catch(exception e)
 			{
@@ -47,7 +50,8 @@ int main()
 			{
 				firstNumber = stod(input1);
 				secondNumber = stod(input2);
-				cout << "The result is " << firstNumber - secondNumber << endl;
+				cout << "The result is " << 
+				firstNumber - secondNumber << endl;
 			}
 			catch(exception e)
 			{
@@ -60,11 +64,42 @@ int main()
 			{
 				firstNumber = stod(input1);
 				secondNumber = stod(input2);
-				cout << "The result is " << firstNumber * secondNumber << endl;
+				cout << "The result is " << 
+				firstNumber * secondNumber << endl;
 			}
 			catch(exception e)
 			{
-				cout <<"Invalid inputs"<<endl;
+				cout << "Invalid inputs" << endl;
+			}
+		}
+		else if (operation == 94) //potencies
+		{
+			try
+			{
+				firstNumber = stod(input1);
+				secondNumber = stod(input2);
+				if(secondNumber == 0)
+				{
+					cout << "The result is 1" << endl;
+				}
+				else if(secondNumber < 0)
+				{
+					cout << "No negative exponents" << endl; 
+				}
+				else
+				{
+					double startNumber = firstNumber;
+					for(double i = 1; i < secondNumber; i++)
+					{
+						firstNumber = firstNumber * startNumber;
+					}
+					cout << "The result is " << 
+					firstNumber << endl;
+				}
+			}
+			catch(exception e)
+			{
+				cout << "Invalid inputs" << endl;
 			}
 		}
 		else if (operation == 47 ) //division
@@ -75,7 +110,8 @@ int main()
 				secondNumber = stod(input2);
 				if (secondNumber != 0)
 				{ 
-					cout << "The result is " << firstNumber / secondNumber << endl;
+					cout << "The result is " << 
+					firstNumber / secondNumber << endl;
 				}
 				else
 				{
@@ -95,15 +131,19 @@ int main()
 				secondNumber = stod(input2);
 				if (firstNumber == secondNumber)
 				{
-					cout << "The first number equals the second" << endl;
+					cout << "The first number equals the second" 
+					<< endl;
 				}
 				if (firstNumber < secondNumber)
 				{
-					cout << "The first number is less than the second" << endl;
+					cout << "The first number is less than the second" 
+					<< endl;
 				}
 				if (firstNumber > secondNumber)
 				{
-					cout << "The first number is greater than the second" << endl;
+					cout << 
+					"The first number is greater than the second" <<
+					endl;
 				}
 			}
 			catch (...)
@@ -135,17 +175,14 @@ int main()
 				}
 				if (logOperator == 88) //xor
 				{
-					cout << "The result is " << ((y && (!x) ) || (!y && x)) << endl;
+					cout << "The result is i" << 
+					((y && (!x) ) || (!y && x)) << endl;
 				}
 			}
 			catch (...)
 			{
 				cout << "Invalid inputs" << endl;
 			}
-		}
-		else if (operation == 94) //square
-		{
-			cout << "The result is " << firstNumber * firstNumber << endl;
 		}
 		else
 		{
