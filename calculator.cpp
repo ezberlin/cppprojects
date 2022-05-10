@@ -4,7 +4,7 @@ using namespace std;
 int again {1};
 int main()
 {
-	while (again == 1)
+	while(again == 1)
 	{
 		char operation {0};
 		double firstNumber {0};
@@ -16,21 +16,21 @@ int main()
 		cin >> input1;
 		cout << "Enter operation (addition: +, subtraction: -, "
 		"multiplication: *, division: /, test of relation: =, "
-		"potencies: ^, logical operators: ?): ";
+		"potencies: ^, logical operators: ?, prime tester: p): ";
 		cin >> operation;
-		if (operation == 63)
+		if(operation == 63)
 		{
 			cout << "Enter logical operator "
 			"(not: x, and: +, or: /, xor: X): ";
 			cin >> logOperator;
 		}
-		if (logOperator != 120)
+		if((logOperator != 120) && (operation != 112))
 		{	
 			cout << "Enter second number: ";
 			cin >> input2;
 		}
 
-		if (operation == 43) //addition
+		if(operation == 43) //addition
 		{
 			try
 			{
@@ -41,10 +41,10 @@ int main()
 			}
 			catch(exception e)
 			{
-				cout <<"Invalid inputs"<<endl;
+				cout << "Invalid inputs" << endl;
 			}
 		}
-		else if (operation == 45) //subtraction
+		else if(operation == 45) //subtraction
 		{
 			try
 			{
@@ -58,7 +58,7 @@ int main()
 				cout <<"Invalid inputs"<<endl;
 			}
 		}
-		else if (operation == 42) //multiplication
+		else if(operation == 42) //multiplication
 		{
 			try
 			{
@@ -72,7 +72,7 @@ int main()
 				cout << "Invalid inputs" << endl;
 			}
 		}
-		else if (operation == 94) //potencies
+		else if(operation == 94) //potencies
 		{
 			try
 			{
@@ -123,30 +123,66 @@ int main()
 				cout << "Invalid inputs" << endl;
 			}
 		}
+		else if(operation == 112) //prime
+		{
+			try
+			{
+				long long primeNumber = 0;
+				long long divisor = 0;
+				primeNumber = stoll(input1);
+				bool is_prime = true;
+				if(primeNumber == 1)
+				{
+					is_prime = false;
+				}
+				for (long long t = 2; t < primeNumber; t++)
+				{
+					if (primeNumber % t == 0)
+					{
+						is_prime = false;
+						divisor = t;
+						break;
+					}
+				}
+				if(is_prime == true)
+				{
+					cout << primeNumber << " is prime." << endl;
+				}
+				else
+				{
+					cout << primeNumber << " isn't prime, "
+					"it's i.e. divisible by " << divisor << endl;
+				}
+			}
+			catch(exception e)
+			{
+				cout << "Invalid inputs" << endl;
+			}
+		}
 		else if (operation == 61) //test of equality
 		{
 			try
 			{
 				firstNumber = stod(input1);
 				secondNumber = stod(input2);
-				if (firstNumber == secondNumber)
+				if(firstNumber == secondNumber)
 				{
 					cout << "The first number equals the second" 
 					<< endl;
 				}
-				if (firstNumber < secondNumber)
+				if(firstNumber < secondNumber)
 				{
 					cout << "The first number is less than the second" 
 					<< endl;
 				}
-				if (firstNumber > secondNumber)
+				if(firstNumber > secondNumber)
 				{
 					cout << 
 					"The first number is greater than the second" <<
 					endl;
 				}
 			}
-			catch (...)
+			catch(...)
 			{
 				cout << "Invalid inputs" << endl;
 			} 
@@ -167,7 +203,7 @@ int main()
 				}
 				else if (logOperator == 43) //and
 				{
-					cout << "The result is " << (y && x) << endl ;
+					cout << "The result is " << (y && x) << endl;
 				}
 				else if (logOperator == 47) //or
 				{
