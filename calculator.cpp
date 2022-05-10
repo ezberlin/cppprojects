@@ -175,7 +175,7 @@ int main()
 				}
 				if (logOperator == 88) //xor
 				{
-					cout << "The result is i" << 
+					cout << "The result is " << 
 					((y && (!x) ) || (!y && x)) << endl;
 				}
 			}
